@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.arch'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.apache.commons:commons-lang3:3.10')
+
+    testCompile('org.junit.jupiter:junit-jupiter:5.6.2')
+    testCompile('org.mockito:mockito-core:3.3.3')
+    testCompile('org.mockito:mockito-junit-jupiter:3.3.3')
+}
+
+test {
+    useJUnitPlatform()
+}
