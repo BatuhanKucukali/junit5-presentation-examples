@@ -8,10 +8,12 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 public class StandardTests {
     @BeforeAll
     static void initAll() {
+        System.out.println("initAll");
     }
 
     @BeforeEach
     void init() {
+        System.out.println("init");
     }
 
     @Test
@@ -37,9 +39,11 @@ public class StandardTests {
 
     @AfterEach
     void tearDown() {
+        System.out.println("tearDown");
     }
 
     @AfterAll
     static void tearDownAll() {
+        System.out.println("tearDownAll");
     }
 }
