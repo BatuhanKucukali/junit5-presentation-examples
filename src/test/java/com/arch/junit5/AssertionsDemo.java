@@ -12,8 +12,16 @@ public class AssertionsDemo {
 
     @Test
     void standardAssertions() {
-        assertEquals(2, calculator.add(1, 1));
-        assertEquals(4, calculator.multiply(2, 2), "The optional failure message is now the last parameter");
+        int result = calculator.add(1, 1);
+
+        assertEquals(2, result);
+    }
+
+    @Test
+    void standardAssertionsWithCustomMessage() {
+        int result = calculator.multiply(2, 2);
+
+        assertEquals(4, result, "The optional failure message is now the last parameter");
     }
 
     @Test
